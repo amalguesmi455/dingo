@@ -1,0 +1,181 @@
+<section class="regervation_part section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="section_tittle">
+          <p>Sign Up</p>
+          <h2>Let's Sign Up</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="regervation_part_iner">
+          <form [formGroup]="signupForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="name"
+                  placeholder="Name *"
+                />
+                <div
+                *ngIf="
+                  signupForm.controls['name'].invalid &&
+                  (signupForm.controls['name'].dirty ||
+                    signupForm.controls['name'].touched)
+                "
+                class="text-danger"
+              >
+                <div
+                  *ngIf="signupForm.controls['name'].errors?.['minlength']"
+                >
+                  first Name min len 3
+                </div>
+
+                <div
+                  *ngIf="signupForm.controls['name'].errors?.['required']"
+                >
+                  first Name Req *
+                </div>
+              </div>
+
+              </div>
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="mail"
+                  placeholder="Email address *"
+                />
+                <div
+              *ngIf="
+                signupForm.controls['mail'].invalid &&
+                (signupForm.controls['mail'].dirty ||
+                  signupForm.controls['mail'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="signupForm.controls['mail'].errors?.['minlength']"
+              >
+                email min len 3
+              </div>
+
+              <div
+                *ngIf="signupForm.controls['mail'].errors?.['required']"
+              >
+                email Req *
+              </div>
+            </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="phone"
+                  placeholder="Phone number *"
+                />
+                <div
+              *ngIf="
+                signupForm.controls['phone'].invalid &&
+                (signupForm.controls['phone'].dirty ||
+                  signupForm.controls['phone'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="signupForm.controls['phone'].errors?.['minlength']"
+              >
+                Phone min len 6
+              </div>
+
+              <div
+                *ngIf="signupForm.controls['phone'].errors?.['required']"
+              >
+                Phone Req *
+              </div>
+            </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group date">
+                  <input
+
+                    type="text"
+                    class="form-control"
+                    formControlName="password"
+                    placeholder="password *"
+                  />
+                  <div
+              *ngIf="
+                signupForm.controls['password'].invalid &&
+                (signupForm.controls['password'].dirty ||
+                  signupForm.controls['password'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="signupForm.controls['password'].errors?.['minlength']"
+              >
+                Password min len 3
+              </div>
+
+              <div
+                *ngIf="signupForm.controls['password'].errors?.['required']"
+              >
+                Password Req *
+              </div>
+            </div>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group date">
+                  <input
+
+                    type="text"
+                    class="form-control"
+                    formControlName="confirmPwd"
+                    placeholder="Confirm password *"
+                  />
+                  <div
+              *ngIf="
+                signupForm.controls['confirmPwd'].invalid &&
+                (signupForm.controls['confirmPwd'].dirty ||
+                  signupForm.controls['confirmPwd'].touched)
+              "
+              class="text-danger"
+            >
+              <div
+                *ngIf="signupForm.controls['confirmPwd'].errors?.['minlength']"
+              >
+              confirmPwd min len 3
+              </div>
+
+              <div
+                *ngIf="signupForm.controls['confirmPwd'].errors?.['required']"
+              >
+              confirmPwd Req *
+              </div>
+            </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="regerv_btn">
+              <button
+              type="button"
+              class="btn btn-primary py-3 px-5"
+              (click)="signup()"
+            >
+              Sign up
+            </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

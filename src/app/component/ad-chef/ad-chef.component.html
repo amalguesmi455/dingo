@@ -1,0 +1,77 @@
+<section class="regervation_part section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-5">
+        <div class="section_tittle">
+          <p>Add Chef</p>
+          <h2>Let's Add u</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="regervation_part_iner">
+          <form #addPlayerForm="ngForm" (ngSubmit)="addEditChef()">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputEmail4"
+                  name="1"
+                  [(ngModel)]="Chef.nameChef"
+                  placeholder="Name chef *"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputPassword4" name="2"
+                  [(ngModel)]="Chef.emailChef"
+                  placeholder="Email address chef *"
+                />
+              </div>
+
+              <div class="form-group col-md-6">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pnone" name="3" [(ngModel)]="Chef.numberChef"
+                  placeholder="Phone number chef *"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group date">
+                  <input
+                    id="datepicker"
+                    type="text"
+                    class="form-control"
+                    name="4" [(ngModel)]="Chef.passwordChef"
+                    placeholder="password *"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <div class="input-group date">
+                  <input
+                    id="datepicker"
+                    type="text"
+                    class="form-control"
+                    name="5" [(ngModel)]="Chef.confirmPwdChef"
+                    placeholder="Confirm password *"
+                  />
+                </div>
+              </div>
+
+            </div>
+
+            <div class="regerv_btn">
+              <button class=" btn btn_4">ADD</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
